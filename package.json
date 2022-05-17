@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "dev": "ts-node-dev --no-notify --inspect=4321 ./src/index.ts",
+    "start:ts": "node -r ts-node/register ./src/index.ts",
+    "start": "node ./dist/index.js",
+    "build": "tsc",
+    "lint": "eslint './**/*.ts'",
+    "lint-and-fix": "eslint './**/*.ts' --fix",
+    "check": "tsc --noEmit",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postversion": "git push --follow-tags"
+  },
+  "dependencies": {
+    "@fastify/cors": "^7.0.0",
+    "fastify": "^3.29.0",
+    "mercurius": "^9.4.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.7.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.6.4"
+  }
+}
